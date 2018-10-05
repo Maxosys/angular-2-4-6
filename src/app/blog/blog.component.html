@@ -1,0 +1,110 @@
+<section class="image">
+
+<div class="bg-image"><img src="./assets/images/blog-bg.jpg"></div>
+
+  <div class="caption">
+    <div class="container">
+      <h1 class="head__title">Blog </h1>
+      <div class="head__separator">
+          <div class="breadcrumbs">
+            <ul class="items">                                     
+              <li class="item home"><a href="" title="Go to Home Page">Home</a></li>
+              <li class="item">-</li>
+              <li class="item">Blog</li>
+            </ul>
+          </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+<section id="content" class="site_content">
+  <div class="container">
+    <main class="main_content col-sm-8">
+      <div class="blog_posts_wrapper blog_posts_list clearfix  banners_blog_style">
+
+        <article id="" class="blog_post_container" *ngFor="let arr of blogsdata.results" >
+            <div class="blog_post clearfix">
+              <div class="posts_list_wrapper clearfix">
+                <div class="post_thumbnail_wrapper">
+                  <div class="blog_post_banner blog_post_image">
+
+           
+
+        
+          <div *ngIf="arr.file_ext != '.mp4' ;else other_content">
+
+    <a routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" [routerLink]="['/blog-detail', arr.id ]" class="read_more_link">
+
+        <img src="http://www.maxosys.com/developers/uploads/blog/{{ arr.media }}" class="img-responsive wp-post-image" alt="" onError="this.src='http://www.maxosys.com/developers/uploads/blog/windows-app-development.png'" >
+    
+    </a>
+          </div>
+
+          <ng-template #other_content>
+            
+           <video width="320" height="240" style="height: 10%; width: 100%;" controls>
+                    <source src="http://www.maxosys.com/developers/uploads/blog/{{ arr.media }}" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+            </video> 
+
+            
+
+
+          </ng-template>
+
+   </div>
+                </div>
+                <div class="blog_post_title">
+                  <h2 class="post_title"><a routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" routerLink="/blog-detail" class="read_more_link">{{ arr.title }} </a></h2>
+                </div>
+                <div class="blog_post_meta clearfix">
+                  <span class="blog_meta_item blog_meta_date"><span class="screen-reader-text"></span><time class="entry-date published updated" datetime="2015-05-17T23:42:46+00:00">{{ arr.created_date | date:'fullDate' }}</time></span>       
+                </div>
+                <div class="blog_post_description">
+                  <p>{{ arr.content }}.. </p>
+                </div>
+                <div class="blog_post_control clearfix">
+                  <div class="blog_post_control_item blog_post_readmore">
+                    <a routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" [routerLink]="['/blog-detail', arr.id ]"  class="read_more_link">read more</a>
+
+                   
+                  </div> 
+                </div>
+              </div> 
+            </div>
+        </article> 
+
+
+      
+      </div>
+    </main>
+
+    <div class="right-sidebar col-sm-4">
+      <div id="custom-search-input">
+        <div class="input-group col-md-12">
+          <input type="text" class="  search-query form-control" placeholder="Search" />
+            <span class="input-group-btn">
+              <button class="btn btn-danger" type="button">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </span>
+        </div>
+      </div>
+
+      <div class="widgets">
+        <h3>Recent Posts</h3>
+        <ul>
+          <li><a routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" [routerLink]="['/blog-detail', 13 ]" >Offshore Software Testing </a></li>
+          <li><a routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" [routerLink]="['/blog-detail', 14 ]" >Software Maintenance / Enhancement Services by Maxosys</a></li>
+          <li><a routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" [routerLink]="['/blog-detail', 7 ]" >Custom Software Application Development is fast gaining demand and coming business working models</a></li>           
+        </ul>
+      </div>
+    </div>
+
+
+
+
+  </div>
+</section>

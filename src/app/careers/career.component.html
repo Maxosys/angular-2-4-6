@@ -1,0 +1,136 @@
+<section class="image">
+
+<div class="bg-image"><img src="./assets/images/career-bg.jpg"></div>
+  <div class="caption">
+    <div class="container">
+      <h1 class="head__title">Careers</h1>
+      <div class="head__separator">
+          <div class="breadcrumbs">
+            <ul class="items">
+              <li class="item home"><a href="/" title="Go to Home Page">Home</a></li>
+              <li class="item">-</li>
+              <li class="item">Careers</li>
+            </ul>
+          </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<div class="career-desc">
+  <div class="container">
+    <p>It's an opportunity of a life time - to work with the best and brightest, to be an innovator. You'll have endless opportunities to be a part of new and innovative approaches in technology. An amazing opportunity to make an impact early in your career. </p><p>You won't find a company that offers more challenges, potential or access to so many different facets of life and work. Build the career you want, make your choices, put yourself on the road to constant innovation. Work for a company you can be proud of - a company that embraces diversity and is built on a foundation of values.</p>
+
+
+    <div class="section-heading culture">
+      <h2>Culture and perks!</h2>
+      <p class="p1"> Our perks are part of a casual company culture that inspires our employess to work better wherever they are. </p>
+
+      <div class="col-sm-4 careerlist">
+        <img src="./assets/images/flexible.jpg">
+        <h3>Flexible work life</h3>
+        <p>Work when you want, wher you want. We trust you to know your schedule and work when you feel most productive.</p>
+      </div>
+
+      <div class="col-sm-4 careerlist">
+        <img src="./assets/images/learning.jpg">
+        <h3>Learning and development</h3>
+        <p>Curiosity and learning is always encouraged. Travel to talks, conferences and professional development events that interest you in your work life.</p>
+      </div>
+
+      <div class="col-sm-4 careerlist">
+        <img src="./assets/images/referral.jpg">
+        <h3>Referral Bonus</h3>
+        <p>We have great referral program- goodpeople know good people! utlilize your network and help us find the right person for the job</p>
+      </div>
+
+      <div class="careerform">
+        <h2>So What are you waiting for? Feel the form below</h2>
+        <div class="form">
+          <form #f="ngForm" (ngSubmit)="onSubmit(f,$event)" novalidate>
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <input type="text" name="name" id="fname" ngModel required  class="form-control input-sm" placeholder="Name">
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-4 col-md-4">
+
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <input type="text" name="city" id="city" ngModel required class="form-control input-sm" placeholder="City">
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <select ngModel class="selectpicker" data-style="btn-primary" name="jobcategory" >
+  	             <option value="Position Applied For" selected>Position Applied For</option>
+  	             <option value="Developer">Developer</option>
+  	             <option value="Designer">Designer</option>
+  	             <option value="Salesforce Developer">Salesforce Developer</option>
+  	             <option value="UI Designer">UI Designer</option>
+  	             <option value="Support Specialist - Marketo">Support Specialist - Marketo</option>
+  	             <option value="Technical Lead/ Architect – Java">Technical Lead/ Architect-Java</option>
+  	             <option value="Technical Lead – Jive">Technical Lead - Jive</option>
+  	             <option value="Marketing Automation Specialist">Marketing Automation Specialist</option>
+  	             <option value="Magento Developer">Magento Developer</option>
+  	             <option value="PHP Lead">PHP Lead</option>
+  	             <option value="WordPress Developer">WordPress Developer</option>
+  	             <option value="Business Development Manager">Business Development Manager</option>
+  	             <option value="Specialist – PPC">Specialist - PPC</option>
+  	             <option value="Event Marketing Associate">Event Marketing Associate</option>	             
+  	             <option value="Product Marketing Lead">Product Marketing Lead</option>
+  	             <option value="Analyst- Business Intelligence">Analyst - Business Intelligence</option>
+  	             <option value="Sr. Content Writer">Sr. Content Writer</option>
+  	             <option value="BM (Marketo)">BM (Marketo)</option>
+  	             <option value="BM (Lithium)">BM (Lithium)</option>
+  	             <option value="BM (Analytics)">BM (Analytics)</option>
+  	             <option value="Engineer – QA">Engineer - QA</option>
+  	             <option value="Others">Others</option>              
+              </select>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <input type="email" name="email" id="email" ngModel required  class="form-control input-sm" placeholder="Email Address">
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <input type="text" name="phone" id="phone" ngModel  class="form-control input-sm" placeholder="Phone Number">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control textarea" rows="3" name="message" id="message" ngModel required placeholder="Description"></textarea>
+            </div> 
+
+
+            <div class="form-group uploadbtn"> 
+              <div class="input-group input-group-sm">
+                <span class="input-group-btn">
+                  <span class="btn btn-gray btn-file">Browse <input type="file" ngModel  name="file" accept="image/*,application/octet-stream,application/pdf">
+                  </span>
+                </span>
+                <input type="text" class="form-control" placeholder="Choose file" readonly>
+               <!--  <span class="input-group-btn">
+                  <button class="btn btn-gray" type="submit">Ok</button>
+                </span> -->
+              </div>
+
+              <span id="displaycareenresp" style="color: red"></span>
+            </div>
+
+            <button class="btn btn-primary" id="submit_quote_btn" type="submit">Submit</button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
